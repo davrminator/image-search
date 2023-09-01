@@ -10,7 +10,7 @@ const App = () => {
   const [detail, setDetail] = useState({});
 
   const search = () => {
-    axios.get(`https://pixabay.com/api/?key={}&q=${query}`)
+    axios.get(`https://pixabay.com/api/?key=${import.meta.env.VITE_API_KEY}&q=${query}`)
       .then((res) => setData(res.data))
       .catch((err) => console.error(err))
   }
